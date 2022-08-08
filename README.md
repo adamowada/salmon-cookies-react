@@ -1,4 +1,5 @@
-# Adam Owada
+# Vanilla
+## Adam Owada
 
 Practicing React With Salmon Cookies
 
