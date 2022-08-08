@@ -115,3 +115,10 @@ let lima = new Location("Lima", 2, 16, 4.6);
 
 renderTable();
 addForm();
+
+
+/////////////////////////////////////
+
+// export function logSomething() {
+//   console.log('something!');
+// }

@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Sales Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <a href="index.html">Back Home</a>
-    <br>    
+    <br />
     <table id="salesTable">
-        <thead id="tableHead">
-
-        </thead>
-        <tbody id="tableBody">
-
-        </tbody>
-        <tfoot id="tableFoot">
-
-        </tfoot>
+      <thead id="tableHead"></thead>
+      <tbody id="tableBody"></tbody>
+      <tfoot id="tableFoot"></tfoot>
     </table>
     <form id="locationForm">
-        <label for="">
-            Name:
-            <input type="text" name="name" required>
-        </label>
-        <label for="">
-            Min:
-            <input type="number" name="min" required>
-        </label>
-        <label for="">
-            Max:
-            <input type="number" name="max" required>
-        </label>
-        <label for="">
-            Avg Sales:
-            <input type="number" name="avg" step="0.1" required>
-        </label>        
-        <input type="submit" value="Submit Location" id="submitButton">
+      <label for="">
+        Name:
+        <input type="text" name="name" required />
+      </label>
+      <label for="">
+        Min:
+        <input type="number" name="min" required />
+      </label>
+      <label for="">
+        Max:
+        <input type="number" name="max" required />
+      </label>
+      <label for="">
+        Avg Sales:
+        <input type="number" name="avg" step="0.1" required />
+      </label>
+      <input type="submit" value="Submit Location" id="submitButton" />
     </form>
-    <script src="js/app.js"></script>
-</body>
+
+    <div id="like_button_container"></div>
+
+    <script type="module" src="js/app.js"></script>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- JSX -->
+    <div id="root"></div>
+    <script type="text/babel" src="js/App.jsx"></script>
+  </body>
 </html>
