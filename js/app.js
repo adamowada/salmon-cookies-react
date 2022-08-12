@@ -1,3 +1,5 @@
+'use strict';
+
 let hours = [
   "6am",
   "7am",
@@ -93,25 +95,25 @@ function addForm() {
   locationForm.addEventListener("submit", function (e) {
     e.preventDefault();
     let form = e.target;
-    if (form.min.value > form.max.value) {
+    if (Number(form.min.value) > Number(form.max.value)) {
       alert("Min must be less than max");
       return;
     }
     new Location(
       form.name.value,
-      form.min.value,
-      form.max.value,
-      form.avg.value
+      Number(form.min.value),
+      Number(form.max.value),
+      Number(form.avg.value)
     );
     renderTable();
   });
 }
 
-let seattle = new Location("Seattle", 23, 65, 6.3);
-let tokyo = new Location("Tokyo", 3, 24, 1.2);
-let dubai = new Location("Dubai", 11, 38, 3.7);
-let paris = new Location("Paris", 20, 38, 2.3);
-let lima = new Location("Lima", 2, 16, 4.6);
+new Location("Seattle", 23, 65, 6.3);
+new Location("Tokyo", 3, 24, 1.2);
+new Location("Dubai", 11, 38, 3.7);
+new Location("Paris", 20, 38, 2.3);
+new Location("Lima", 2, 16, 4.6);
 
 renderTable();
 addForm();
